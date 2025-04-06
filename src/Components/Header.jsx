@@ -20,7 +20,7 @@ const Header = () => {
           </div>
             <div key={index} className="end">
               <div className="icon">
-              <Link to={isaboutpage ? '/' :'/Aboutus'}><img src={elem.icon} alt="" /></Link>  
+              <Link to={isaboutpage ? '/' :'/Aboutus'}><img src={elem.icon} alt="elemicons" /></Link>  
               </div>              
             </div>
           </>

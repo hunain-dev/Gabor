@@ -6,17 +6,17 @@
 }
 @font-face {
   font-family: "Futura";
-  src: url("/public/Assets/Fonts/Futura.ttf") format("truetype");
+  src: url("/Assets/Fonts/Futura.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Inter";
-  src: url("/Assets/Fonts/inter.otf");
+  src: url("Assets/Fonts/inter.otf");
 }
 @font-face {
   font-family: "Cursor";
-  src: url("/Assets/Fonts/cursor.ttf");
+  src: url("Assets/Fonts/cursor.ttf");
 }
 
 
