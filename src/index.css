@@ -1,0 +1,1725 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+  @font-face {
+    font-family: Futura;
+    src: url(/src/assets/Fonts/Futura\ Bold\ font.ttf);
+  }
+@font-face {
+  font-family: Inter;
+  src: url(/src/assets/Fonts/inter.otf);
+}
+@font-face {
+  font-family: cursor;
+  src: url(/src/assets/Fonts/cursor.ttf);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: none;
+}
+
+.loader {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2; 
+  background: url('https://twistedsifter.com/wp-content/uploads/2013/05/animated-gifs-of-fighting-game-backgrounds-25.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+
+.loader h1 {
+  font-size: 12vw;
+  text-transform: uppercase;
+  font-family: Futura, sans-serif;
+  text-align: center;
+  font-weight: 500;
+  position: relative;
+  z-index: 999;
+  color: #f3eeee;
+
+
+}
+
+.loader .images {
+  height: 30vh;
+  width: 60%; /* You can adjust the width as per your requirement */
+  overflow: hidden;
+  border-radius: 2vw;
+  position: absolute;
+  z-index: 999;
+  margin-top: 2vw;
+  display: flex;
+  gap: 20px; /* Adjust space between images */
+}
+
+.loader .images img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%; /* Ensures images scale to fill container */
+  height: 100%;
+  border-radius: 10px; /* Optional: for rounded corners */
+}
+
+
+
+.Header {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  position: fixed;
+}
+.icon {
+  height: 7vh;
+  width: 3vw;
+  border-radius: 50%;
+  background-color: #d2d2d2;
+  overflow: hidden; 
+}
+
+.icon img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.Home {
+  width: 100%;
+  margin-top: 5vw;
+  z-index: 99;
+}
+
+.Landingpage {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 9vw;
+}
+.landingpageup {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  flex-direction: column;
+  background-color: auto;
+}
+
+.landingpageup h3 {
+  font-family: futura;
+  font-size: 1.4vw;
+  color: rgb(47, 46, 46);
+  text-transform: uppercase;
+  line-height: 1vw;
+}
+.landingpageup h6 {
+  font-family: actay;
+  font-size: 0.9vw;
+  line-height: 1vw;
+  color: #807d7d;
+  text-transform: uppercase;
+}
+.Landingpagetop {
+  height: 16vh;
+  width: 100%;
+  padding: 0 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Landingpagetop h1 {
+  font-family: futura;
+  font-size: 7.1vw;
+  margin: 0.3vw 0;
+  text-transform: uppercase;
+  color: #363636;
+}
+
+.Landingpagebottom {
+  height: 35vh;
+  width: 100%;
+  padding: 0 2vw;
+  margin-bottom: 1vw;
+  display: flex; /* ✅ Images ko side-by-side lane ke liye */
+  align-items: center;
+  justify-content: center;
+  gap: 1vw; /* ✅ Images ke darmiyan gap */
+  position: relative; /* ✅ Parent ko relative banana zaroori hai */
+}
+.Landingpagebottom img {
+  height: 31vh;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 2vw;
+  position: relative; /* ✅ Absolute hatao taake overlap na ho */
+
+  /* ✅ Advanced 3D Shadow Effect */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3),
+    /* Primary shadow */ 10px 10px 20px rgba(0, 0, 0, 0.2),
+    /* Secondary deeper shadow */ 15px 15px 30px rgba(0, 0, 0, 0.1); /* Lightest outer shadow */
+
+  /* ✅ Slight Rotation for 3D Look */
+  transform: rotateX(5deg) rotateY(5deg);
+
+  /* ✅ Smooth transition effect */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* ✅ Hover Effect for More Depth */
+.Landingpagebottom img:hover {
+  cursor: pointer;
+  transform: rotate(20deg) rotateX(20deg) scale(1.05);
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.4), 12px 12px 25px rgba(0, 0, 0, 0.3),
+    18px 18px 35px rgba(0, 0, 0, 0.2);
+}
+
+.Landingpageend {
+  height: 35vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Landingpageend h2 {
+  font-family: futura;
+  font-size: 7vw;
+  line-height: 5.5vw;
+  margin: 0.3vw 0;
+  text-transform: uppercase;
+  color: #c0c0c0;
+}
+.Landingpageend h3 {
+  font-family: futura;
+  font-size: 7vw;
+  line-height: 5.5vw;
+  margin: 0.3vw 0;
+  text-transform: uppercase;
+  color: #c0c0c0;
+}
+
+.Featuredwork {
+  width: 100%;
+  margin-bottom: 8vw;
+}
+
+.Featuredworktop {
+  height: 21vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 3vw;
+}
+
+.Featuredworktop h1 {
+  font-family: futura;
+  font-size: 5vw;
+  line-height: 5.5vw;
+  color: #363636;
+  text-transform: uppercase;
+}
+
+.Featuredworktop h5 {
+  font-family: Inter;
+  font-size: 1.1vw;
+  color: rgb(40, 39, 39);
+}
+
+.Featuredbottom {
+  width: 100%;
+  position: relative;
+}
+
+.swiper {
+  width: 93%;
+  gap: 15vw;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  border-radius: 1vw;
+  cursor: pointer;
+
+}
+
+.imagesection {
+  height: 75vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  overflow: hidden;
+}
+.swiper-slide {
+  height: 90vh;
+  text-align: center;
+  margin-right: 10px; 
+}
+.imagesection img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1vw;
+}
+.imagesection video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1vw;
+}
+.slide button {
+  margin: 1vw 0;
+  height: 7vh;
+  width: 12vw;
+  border-radius: 5vw;
+  background-color: #d2d2d2;
+  border: none;
+  font-family: futura;
+  text-transform: uppercase;
+  font-size: 1.1vw;
+  cursor: pointer;
+  color: #363636;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  width: 50vw;
+  max-width: 600px;
+  background: white;
+  padding: 40px;
+  border-radius: 2vw;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+}
+
+.popup-content img,
+.popup-content video {
+  width: 100%;
+  height: auto;
+  border-radius: 1vw;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.morework {
+  width: 100%;
+  margin-top: 12vw;
+}
+
+.moreworktop {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 5vw;
+}
+
+.moreworktop h1 {
+  font-family: futura;
+  font-size: 6vw;
+  color: #363636;
+  text-transform: uppercase;
+  line-height: 6vw;
+}
+
+.moreworktop h4 {
+  font-family: inter;
+  font-size: 1.5vw;
+  color: #363636;
+}
+.Morworkcars {
+  width: 95%;
+  margin: 0 auto;
+  padding: 0 1vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1vw; /* Space between cards */
+}
+
+.morecards {
+
+  height: 41vh;
+  width: 65%; /* 100% taake grid handle kare */
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border-radius: 2vw;
+  margin: 3vw 0;
+}
+
+.morecards img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+} 
+
+.modal-content {
+  height: 95vh;
+  width: 90%;
+  display: flex;
+  padding: 1vw 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  text-align: center;
+  background-color: whitesmoke;
+  
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.image-gallery {
+  height: 75vh;
+  width: 43%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-gallery img {
+  height: 100%;
+  width: 100%;
+    object-position: center;
+    border-radius: 1vw;
+
+  object-fit: cover;
+}
+
+.close-button {
+  position: absolute;
+  top: 4vh;
+  right: 6vw;
+  background-color: rgb(225, 223, 220);
+  border-radius: 4vw;
+  color: rgb(42, 41, 41);
+  cursor: pointer;
+  padding: 1.3vw 1.3vw;
+  font-size: 1vw;
+}
+
+.Footer {
+  width: 100%;
+  background-color: #d2d2d2;
+  margin-top: 10vw;
+  overflow: hidden;
+  position: relative; /* ✅ Important for GSAP */
+}
+
+.Footertop {
+  height: 69vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2vw;
+  margin: 0 auto;
+}
+
+.Footertop h1 {
+  object-fit: cover;
+  font-family: futura;
+  text-transform: uppercase;
+  font-size: 30vw;
+  color: #ffffff;
+}
+
+.Footerbtm {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Footerbtm h2 {
+  font-family: futura;
+  font-size: 1.2vw;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 2.3vw;
+}
+
+.Footerbtm h3 {
+  font-family: futura;
+  font-size: 1.7vw;
+  line-height: 0.1vw;
+  color: #363636;
+  text-transform: uppercase;
+  margin-bottom: 1.4vw;
+
+}
+
+.Footerbtm h6 {
+  font-family: inter;
+  font-size: 1vw;
+  color: #363636;
+}
+
+.Aboutus {
+  width: 100%;
+  margin-top: 10vw;
+}
+
+.Aboutlanding {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 70%;
+}
+.Aboutlanding h1 {
+  font-family: futura;
+  text-transform: uppercase;
+  font-size: 5vw;
+  color: #363636;
+}
+
+.Aboutlandingbottom {
+  width: 74%;
+}
+
+.Aboutlandingbottom h2 {
+  font-family: futura;
+  font-size: 5vw;
+  line-height: 4vw;
+  text-transform: uppercase;
+  text-align: center;
+  color: #cdcdcd;
+  margin: 3vw;
+  transition: all 1s;
+}
+
+.News {
+  width: 100%;
+  margin-top: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.News h1 {
+  font-family: futura;
+  font-size: 6vw;
+  color: #363636;
+  text-transform: uppercase;
+  margin: 2vw;
+}
+
+.Newscardcover {
+  width: 70%;
+  gap: 1vw;
+  padding: 0 2vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  gap: 1vw; 
+    padding: 1vw 1vw;
+  overflow: hidden;
+}
+
+
+.newscard{
+  height: 27vh;
+  border-radius: 2vw;
+  padding: 1.3vw 1vw;
+  display: flex;
+  align-items: center;
+gap: 1vw;
+  
+}
+.cardimg{
+  height: 23vh;
+  width: 29%;
+  border-radius: 20px;
+overflow: hidden;
+
+
+}
+.cardimg img{ 
+  width: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+
+}
+
+.newscard .carddesc{
+  height: 100%;
+  width: 69%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.2vw;
+
+  
+}
+.newscard .carddesc h4{ 
+ font-family: futura;
+ font-weight: 500;
+ font-size: 2.4vw;
+ text-transform: uppercase;
+ color: whitesmoke;
+
+  
+}
+.Porject {
+  width: 100%;
+  margin-top: 7vw;
+}
+
+.Porject h1 {
+  font-family: futura;
+  font-size: 4vw;
+  text-transform: uppercase;
+  color: #363636;
+  text-align: center;
+}
+.Seeproject {
+  margin: 0 auto;
+  height: 100vh;
+  width: 80%;
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  gap: 0.8vw;
+  overflow: hidden;
+}
+
+.Seeproject .seeprojectleft {
+  height: 100%;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Seeproject .seeprojectleft img {
+  height: 19vh;
+   object-fit: cover;
+  object-position: center;
+  border-radius: 1vw;
+  opacity: 0;
+  transition: all  1s;
+
+}
+.Seeproject .seeprojectleft img.active {
+  opacity: 1;
+}
+
+.Seeproject .seeprojectcenter {
+  height: 100%;
+  width: 51%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+    gap: 2vw;
+  }
+  .Seeproject .seeprojectcenter h5 {
+font-family: futura;
+text-transform: uppercase;
+font-size: 7.2vw;
+color: #c4c0c0;
+line-height:11vh;
+transition: all  0.6s;
+}
+
+.Seeproject .seeprojectcenter h5:hover   {
+  font-family: futura;
+  text-transform: uppercase;
+  font-size: 7.2vw;
+  color: #363636;
+  line-height:17vh;
+  }
+.Seeproject .seeprojectright {
+  height: 100%;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.Seeproject .seeprojectright img {
+  height: 19vh;
+   object-fit: cover;
+  object-position: center;
+  border-radius: 1vw;
+  opacity: 0;
+  transition: all  1s;
+
+}
+.Seeproject .seeprojectright img.active {
+  opacity: 1;
+}
+
+
+#modal-content h2{
+  font-family: futura;
+  font-size: 3vw;
+  font-weight: 500;
+  color: #363636;
+  text-transform: uppercase;
+}
+
+
+#modal-content p{
+  font-family: actay;
+  font-size: 1.2vw;
+  font-weight: 500;
+  margin-bottom: 1vw;
+  color: #363636;
+  padding: 0  10vw;
+}
+
+
+@media (max-width: 768px){
+  .loader h1 {
+    font-size: 16vw;
+  }
+
+  .Header {
+    height: 7vh;
+    width: 100%;
+    padding: 0 3vw;
+  }
+  .icon {
+    height: 7vh;
+    width: 13vw;
+  }
+  
+  .Home {
+    margin-top: 17vw;
+  }
+
+  .Landingpage {
+    width: 100%;
+    margin-bottom: 3vw;
+  }
+
+  
+.landingpageup h3 {
+  font-size: 6vw;
+  line-height: 4vh;
+
+}
+.landingpageup h6 {
+  font-size: 3vw;
+}
+.Landingpagetop {
+  height: 12vh;
+}
+.Landingpagetop {
+  height: 10vh;
+  margin-top: 2vw;
+
+
+}
+
+
+.Landingpagetop h1 {
+  font-size: 13vw;
+  
+}
+
+.Landingpagebottom {
+  height: 19vh;
+}
+.Landingpagebottom img {
+  height: 13vh;
+
+}
+.Landingpageend {
+  height: 15vh;
+
+}
+.Landingpageend h2 {
+  font-size: 17vw;
+  line-height: 20vw;
+}
+.Landingpageend h3 {
+  font-size: 9vw;
+}
+
+
+.Featuredwork {
+  width: 100%;
+  overflow-x: hidden;
+
+  margin-bottom: 8vw;
+}
+
+
+.Featuredworktop {
+  height: 18vh;
+  margin-bottom: 1vw;
+}
+
+.Featuredworktop h1 {
+  font-size: 10vw;
+  line-height: 10vw;
+}
+
+.Featuredworktop h5 {
+  font-size: 4vw;
+}
+
+.Featuredbottom {
+  width: 100%;
+}
+.swiper {
+  width: 190%;
+  gap: 15vw;
+}
+.imagesection {
+  height: 40vh;
+  width: 100%;
+}
+
+.slide button {
+  margin: 3vw 0;
+  height: 7vh;
+  width: 29vw;
+  font-size: 3.5vw;
+}
+
+
+.morework {
+  width: 100%;
+  margin-top: 12vw;
+}
+
+.moreworktop {
+  margin-bottom: 8vw;
+}
+.moreworktop h1 {
+  font-size: 10vw;
+  line-height: 11vw;
+}
+
+.moreworktop h4 {
+  font-size: 3vw;
+}
+.Morworkcars {
+  display: grid;
+  gap: 3vw;
+  padding: 0 1vw;
+  grid-template-columns: repeat(2, 1fr);
+}
+.morecards {
+  height: 23vh;
+  width: 90%;
+}
+
+
+
+.modal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  padding: 0 1vw;
+  background-color: whitesmoke;
+}
+
+.modal-content {
+  height: 70vh;
+  width: 100%;
+  padding: 1vw 0;
+  background-color: whitesmoke;
+  
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.image-gallery {
+  height: 75vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#modal-content h2{
+  font-size:13vw;
+}
+
+
+#modal-content p{
+  font-size: 3vw;
+}
+
+
+.close-button {
+  padding: 2vw 2vw;
+  font-size: 4vw;
+}
+
+
+
+.Aboutus {
+  width: 100%;
+  margin-top: 10vw;
+}
+
+
+
+
+.Aboutlanding {
+  width: 100%;
+  margin-bottom: 6vw;
+}
+
+.Aboutlanding h1 {
+  font-size: 10vw;
+}
+.Aboutlandingbottom {
+  width: 90%;
+}
+
+.Aboutlandingbottom h2 {
+  font-size: 9vw;
+  line-height: 8vw;
+  margin: 3vw;
+}
+
+.News {
+  margin-top: 10vw;
+}
+.News h1 {
+  font-size: 10vw;
+  margin: 3vw;
+}
+
+.Newscardcover {
+  width: 100%;
+  gap: 1vw;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); 
+    padding: 1vw 1vw;
+  overflow: hidden;
+}
+
+
+.newscard{
+  height: 20vh;
+  padding: 6vw 2vw;
+  
+}
+
+.cardimg{
+  height: 16vh;
+  width: 36%;
+
+
+}
+
+.newscard .carddesc{
+  width: 69%;
+  gap: 3vw;
+  padding: 0 2vw;
+
+  
+}
+
+.newscard .carddesc h4{ 
+  font-size: 7vw;
+ 
+ }
+
+
+ .Porject {
+  width: 100%;
+  margin-top: 7vw;
+}
+
+
+.Porject h1 {
+  font-size: 15vw;
+}
+
+.Seeproject {
+  height: 46vh;
+  width: 100%;
+}
+.Seeproject .seeprojectleft {
+  width: 27%;
+}
+
+.Seeproject .seeprojectleft img {
+  height: 10vh;
+
+}
+
+.Seeproject .seeprojectcenter {
+  width: 90%;
+    gap: 1vw;
+  }
+  .Seeproject .seeprojectcenter h5 {
+font-size: 9vw;
+line-height:7vh;
+}
+
+.Seeproject .seeprojectright {
+  width: 27%;
+}
+
+.Seeproject .seeprojectright img {
+  height: 10vh;
+
+}
+
+
+
+
+.Footer {
+  margin-top: 7vw;
+}
+.Footertop {
+  height: 22vh;
+  margin-bottom: 1vw;
+}
+
+.Footerbtm h2 {
+  font-size: 5.5vw;
+  margin-bottom: 3vw;
+}
+
+.Footerbtm h3 {
+  font-size: 8vw;
+  line-height: 4vw;
+  margin-bottom: 3vw;
+
+}
+.Footerbtm h6 {
+  font-size: 4vw;
+}
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+
+  .loader h1 {
+    font-size: 16vw;
+  }
+
+  .Header {
+    height: 8vh;
+    width: 100%;
+    padding: 0 3vw;
+  }
+  .icon {
+    height: 6.3vh;
+    width: 8.3vw;
+  }
+
+  .Home {
+    margin-top: 11vw;
+  }
+
+  
+  .Landingpage {
+    width: 100%;
+    margin-bottom: 2vw;
+  }
+
+  
+.landingpageup h3 {
+  font-size: 5vw;
+  line-height: 4.5vh;
+
+}
+.landingpageup h6 {
+  font-size: 2vw;
+}
+
+.Landingpagetop {
+  height: 10vh;
+  margin-top: 2vw;
+}
+
+.Landingpagetop h1 {
+  font-size: 12vw;
+  
+}
+
+.Landingpagebottom {
+  height: 17vh;
+}
+.Landingpagebottom img {
+  height: 14vh;
+
+}
+.Landingpageend {
+  height: 14.5vh;
+
+}
+.Landingpageend h2 {
+  font-size: 12vw;
+  line-height: 10vw;
+}
+.Landingpageend h3 {
+  font-size: 7vw;
+}
+
+
+.Featuredwork {
+  margin-bottom:6vw;
+  margin-top: 8vw;
+}
+
+
+.Featuredworktop {
+  height: 17.5vh;
+  margin-bottom: 1vw;
+}
+
+.Featuredworktop h1 {
+  font-size: 11vw;
+  line-height: 9vw;
+}
+
+.Featuredworktop h5 {
+  font-size: 3.5vw;
+}
+
+.Featuredbottom {
+  width: 100%;
+}
+.swiper {
+  width: 150%;
+}
+.imagesection {
+  height: 43vh;
+  width: 100%;
+}
+
+.slide button {
+  height: 6vh;
+  width: 28vw;
+  font-size: 3.3vw;
+}
+
+
+
+.morework {
+  width: 100%;
+  margin-top: 12vw;
+}
+
+.moreworktop {
+  margin-bottom: 5.6vw;
+}
+.moreworktop h1 {
+  font-size: 10vw;
+  line-height: 10vw;
+}
+
+.moreworktop h4 {
+  font-size: 3.1vw;
+}
+.Morworkcars {
+  display: grid;
+  gap: 2vw;
+  padding: 0 1vw;
+  grid-template-columns: repeat(3, 1fr);
+}
+.morecards {
+  height: 20vh;
+  width: 91%;
+}
+
+
+
+.modal {
+
+  padding: 0 1vw;
+  background-color: whitesmoke;
+}
+
+.modal-content {
+  height: 70vh;
+  width: 100%;
+  padding: 1vw 0;
+  
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.image-gallery {
+  height: 63vh;
+  width: 100%;
+  padding: 0 3vw;
+}
+
+#modal-content h2{
+  font-size:13vw;
+}
+
+
+#modal-content p{
+  font-size: 3vw;
+}
+
+
+.close-button {
+  padding: 2vw 2vw;
+  font-size: 4vw;
+}
+
+
+
+
+
+.Aboutus {
+  width: 100%;
+  margin-top: 10vw;
+}
+
+
+
+.Aboutlanding {
+  width: 100%;
+  margin-bottom: 6vw;
+}
+
+.Aboutlanding h1 {
+  font-size: 7vw;
+}
+.Aboutlandingbottom {
+  width: 80%;
+}
+
+
+.Aboutlandingbottom h2 {
+  font-size: 6.3vw;
+  line-height: 6vw;
+  margin: 3vw;
+}
+
+
+.News {
+  margin-top: 10vw;
+}
+.News h1 {
+  font-size: 10vw;
+  margin: 2vw;
+}
+
+
+
+
+.Newscardcover {
+  width: 100%;
+  gap: 1vw;
+  grid-template-columns: repeat(2, 1fr); 
+}
+
+
+.newscard{
+  height: 16vh;
+  padding: 6vw 2vw;
+  
+}
+
+.cardimg{
+  height: 11vh;
+  width: 40%;
+
+
+}
+
+.newscard .carddesc{
+  width: 69%;
+  gap: 3vw;
+
+  
+}
+
+.newscard .carddesc h4{ 
+  font-size: 3.5vw;
+ 
+ }
+
+
+ 
+ .Porject {
+  width: 100%;
+  margin-top: 9vw;
+}
+
+
+.Porject h1 {
+  font-size: 7vw;
+}
+
+.Seeproject {
+  height: 50vh;
+  width: 100%;
+}
+.Seeproject .seeprojectleft {
+  width: 22%;
+}
+
+.Seeproject .seeprojectleft img {
+  height: 10vh;
+
+}
+
+.Seeproject .seeprojectcenter {
+  width: 90%;
+    gap: 1vw;
+  }
+  .Seeproject .seeprojectcenter h5 {
+font-size: 10vw;
+line-height:7vh;
+}
+
+.Seeproject .seeprojectright {
+  width: 27%;
+}
+
+.Seeproject .seeprojectright img {
+  height: 10vh;
+
+}
+
+
+
+.Footer {
+  margin-top: 7vw;
+}
+.Footertop {
+  height: 22vh;
+  margin-bottom: 2vw;
+}
+
+.Footertop h1 {
+  font-size: 26vw;
+}
+
+
+.Footerbtm h2 {
+  font-size: 3.5vw;
+  margin-bottom: 2vw;
+}
+
+.Footerbtm h3 {
+  font-size: 6.2vw;
+  line-height: 3vw;
+  margin-bottom: 2vw;
+
+}
+.Footerbtm h6 {
+  font-size: 3vw;
+}
+
+
+
+
+
+
+.modal {
+
+  padding: 0 1vw;
+}
+
+
+
+.modal-content {
+  height: 70vh;
+  width: 100%;
+  padding: 1vw 0;
+  
+}
+.image-gallery {
+  height: 63vh;
+  width: 100%;
+  padding: 0 3vw;
+}
+#modal-content h2{
+  font-size:12vw;
+}
+
+#modal-content p{
+  font-size: 3vw;
+  margin-bottom: 1vw;
+}
+
+.close-button {
+  padding: 2vw 2vw;
+  font-size: 2.5vw;
+}
+
+
+
+}
+
+
+@media (min-width: 1025px) and (max-width: 1280px){
+  .loader h1 {
+    font-size: 15vw;
+
+  
+  }
+  
+  
+.Header {
+  height: 11vh;
+}
+.icon {
+  height: 7.5vh;
+  width: 4vw;
+}
+.Home {
+  width: 100%;
+}
+.Landingpage {
+  width: 100%;
+  margin-bottom: 9vw;
+}
+.landingpageup {
+  margin: 1vw 0;
+}
+
+.landingpageup h3 {
+  font-size: 2.3vw;
+  line-height: 2vw;
+}
+.landingpageup h6 {
+  font-size: 1.2vw;
+}
+.Landingpagetop {
+  height: 16vh;
+  width: 100%;
+
+}
+.Landingpagetop h1 {
+  font-size: 8vw;
+}
+.Featuredwork {
+  width: 100%;
+  margin-bottom: 8vw;
+}
+.Featuredworktop {
+  height: 21vh;
+  margin-bottom: 3vw;
+}
+.Featuredworktop h1 {
+  font-size: 6vw;
+  line-height:6vw;
+}
+.Featuredworktop h5 {
+  font-size: 1.9vw;
+}
+
+
+.Featuredbottom {
+  width: 100%;
+}
+
+.swiper {
+  width: 100%;
+}
+.imagesection {
+  height: 78vh;
+}
+.slide button {
+  height: 8vh;
+  width: 14vw;
+  font-size: 1.6vw;
+}
+
+
+.morework {
+  width: 100%;
+  margin-top: 12vw;
+}
+
+.moreworktop h1 {
+  font-size: 8vw;
+  line-height: 8vw;
+}
+.moreworktop h4 {
+  font-size: 1.7vw;
+}
+
+.Morworkcars {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1vw; 
+}
+
+.morecards {
+
+  height: 48vh;
+  width: 86%;
+  margin: 3vw 0;
+}
+
+
+.modal {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+} 
+
+
+.modal-content {
+  width: 90%;
+  
+}
+.modal-content .close {
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+}
+
+.image-gallery {
+  height: 89vh;
+  width: 53%;
+}
+
+#modal-content h2{
+  font-size:3vw;
+}
+
+
+#modal-content p{
+  font-size: 1.5vw;
+}
+
+.Footer {
+
+  width: 100%;
+  background-color: #d2d2d2;
+  margin-top: 7vw;
+  overflow: hidden;
+  position: relative; /* ✅ Important for GSAP */
+}
+
+
+.Footertop {
+  height: 59vh;
+}
+
+.Footerbtm h2 {
+  font-size: 3vw;
+  margin-bottom: 2vw;
+}
+
+.Footerbtm h3 {
+  font-size: 3vw;
+  line-height: 1.6vw;
+  margin-bottom: 1.9vw;
+
+}
+.Footerbtm h6 {
+  font-size: 2vw;
+}
+
+.Aboutus {
+  width: 100%;
+  margin-top: 10vw;
+}
+.Aboutlanding {
+  margin: 0 auto;
+  width: 73%;
+}
+.Aboutlanding h1 {
+  font-size: 6vw;
+  color: #363636;
+}
+.Aboutlandingbottom {
+  width: 74%;
+}
+.Aboutlandingbottom h2 {
+  font-size: 5.1vw;
+  line-height: 4.4vw;
+  margin: 3vw;
+}
+.News {
+  width: 100%;
+  margin-top: 2vw;
+
+}
+
+.News h1 {
+  font-size:7vw;
+  margin: 2vw;
+}
+
+
+.Newscardcover {
+  width: 80%;
+  padding: 0 2vw;
+  grid-template-columns: repeat(2, 1fr);
+
+}
+
+.newscard{
+  height: 24vh;
+  padding: 1.5vw 1vw;
+gap: 1vw;
+  
+}
+
+.cardimg{
+  height: 22vh;
+  width: 32%;
+
+
+}
+.newscard .carddesc h4{ 
+  font-size: 2.5vw;
+ 
+   
+ }
+
+ .Porject {
+  width: 100%;
+  margin-top: 7vw;
+}
+.Porject h1 {
+  font-size: 7vw;
+}
+
+.Seeproject {
+  height: 90vh;
+  width: 80%;
+}
+.Seeproject .seeprojectleft {
+  height: 100%;
+  width: 25%;
+
+}
+.Seeproject .seeprojectleft img {
+  height: 20vh;
+
+}
+
+.Seeproject .seeprojectcenter {
+  height: 100%;
+  width: 51%;
+  }
+  .Seeproject .seeprojectcenter h5 {
+    font-size: 7.5vw;
+    line-height:12vh;
+    }
+    .Seeproject .seeprojectright img {
+      height: 20vh;
+    
+    }
+    
+}     
+
+
+
