@@ -5,7 +5,7 @@ const Header = () => {
   const isaboutpage = Location.pathname === '/Aboutus';
     const obj = [
       {
-           icon: `/src/assets/images/man.png`,
+           icon: `/public/Assets/images/man.png`,
 
         
       },

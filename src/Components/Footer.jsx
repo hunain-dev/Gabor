@@ -12,7 +12,7 @@ const Footer = () => {
         </div>
       <div className="Footerbtm">
         <h2>SPENCERGMAIL.COM</h2>
-       <a href="https://www.instagram.com/spencergab/"> <h3>Instagram</h3></a>
+       <a href="https://www.instagram.com/spencergab/"><h3>Instagram</h3></a>
        <a href="https://dribbble.com/spencergabor"><h3>Dribbble</h3></a> 
         <h6>All rights reserved.</h6>
       </div>

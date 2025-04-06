@@ -6,7 +6,7 @@
 }
 @font-face {
   font-family: "Futura";
-  src: url("/Assets/Fonts/Futura.ttf") format("truetype");
+  src: url("/public/Assets/Fonts/Futura.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -524,7 +524,7 @@ body {
 
 .Footerbtm h2 {
   font-family: futura;
-  font-size: 1.2vw;
+  font-size: 1.6vw;
   color: white;
   text-transform: uppercase;
   margin-bottom: 2.3vw;
@@ -537,13 +537,19 @@ body {
   color: #363636;
   text-transform: uppercase;
   margin-bottom: 1.4vw;
+  
 
 }
+.Footerbtm a {
+text-decoration: none;
+  
 
+}
 .Footerbtm h6 {
   font-family: inter;
   font-size: 1vw;
   color: #363636;
+  
 }
 
 .Aboutus {
