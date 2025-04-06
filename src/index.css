@@ -7,15 +7,15 @@
 
   @font-face {
     font-family: Futura;
-    src: url(/src/assets/Fonts/Futura.ttf);
+    src: url(/public/assets/Fonts/Futura.ttf);
   }
 @font-face {
   font-family: Inter;
-  src: url(/src/assets/Fonts/inter.otf);
+  src: url(/public/assets/Fonts/inter.otf);
 }
 @font-face {
   font-family: cursor;
-  src: url(/src/assets/Fonts/cursor.ttf);
+  src: url(/public/assets/Fonts/cursor.ttf);
 }
 
 html,

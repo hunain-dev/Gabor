@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";   
-import img1 from "/src/assets/images/landigpage1 (1).png";
-import img2 from "/src/assets/images/landigpage1 (2).png";
-import img3 from "/src/assets/images/landigpage1 (3).png";
-import img4 from "/src/assets/images/landigpage1 (4).png";
+import img1 from "/public/Assets/images/landigpage1 (1).png";
+import img2 from "/public/Assets/images/landigpage1 (2).png";
+import img3 from "/public/assets/images/landigpage1 (3).png";
+import img4 from "/public/assets/images/landigpage1 (4).png";
 
 const Landingpage = () => {
   const obj = [
